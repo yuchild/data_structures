@@ -37,6 +37,13 @@ class linked_list: # wrapper to access the node class
         if index>=self.length():
             print("Error: 'Get' Index out of range!")
             return None
+        cur_idx=0
+        cur_node=self.head
+        while True:
+            cur_node=cur_node.next
+            if cur_idx==index:
+                return cur_node.data
+            cur_idx+=1
 
 if __name__ == "__main__":
     ...
